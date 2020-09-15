@@ -1,4 +1,6 @@
-// FOR JAVASCRIPT FUNDAMENTAL EXERCISE PART III
+// FOR JAVASCRIPT FUNDAMENTAL EXERCISES
+
+//  Boolean Logic Exercises Part III
 const isItOverZeroPointFive = () => Math.round(Math.random() * 10) / 10;
 
 if (isItOverZeroPointFive() > 0.5) {
