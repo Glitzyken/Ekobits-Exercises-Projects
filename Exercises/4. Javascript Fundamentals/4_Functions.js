@@ -19,29 +19,36 @@
 
 // 3) this function takes in one parameter (a number from 1-7) and returns the day of the week (1 is Sunday, 2 is Monday, 3 is Tuesday etc.). If the number is less than 1 or greater than 7, the function should return undefined;
 
-let printDay = (input) => {
-  let dayNumbers = [1, 2, 3, 4, 5, 6, 7];
-  let days = [
-    "Sunday",
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
-  ];
+// let printDay = (input) => {
+//   let dayNumbers = [1, 2, 3, 4, 5, 6, 7];
+//   let days = [
+//     "Sunday",
+//     "Monday",
+//     "Tuesday",
+//     "Wednesday",
+//     "Thursday",
+//     "Friday",
+//     "Saturday",
+//   ];
 
-  let day;
+//   let day;
 
-  for (let dayNum of dayNumbers) {
-    if (input === dayNum) {
-      day = dayNumbers.indexOf(dayNum);
-    }
-  }
+//   for (let dayNum of dayNumbers) {
+//     if (input === dayNum) {
+//       day = dayNumbers.indexOf(dayNum);
+//     }
+//   }
 
-  return days[day];
-};
+//   return days[day];
+// };
 
-console.log(printDay(7));
+// console.log(printDay(7));
 
 // 4) this function takes in one parameter (an array) and returns the last value in the array. It should return undefined if the array is empty.
+
+// let lastElement = (arrInput) => {
+//   return arrInput.slice(-1)[0];
+//   // return arrInput.length;
+// };
+
+// console.log(lastElement([1, 2, 3, 4]));
