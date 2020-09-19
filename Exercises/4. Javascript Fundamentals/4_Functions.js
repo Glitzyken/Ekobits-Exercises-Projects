@@ -5,7 +5,6 @@
 // let difference = (input1, input2) => {
 //   return input1 - input2;
 // };
-
 // console.log(difference(2, 2)); // 0
 // console.log(difference(0, 2)); // -2
 
@@ -13,12 +12,10 @@
 // let product = (input1, input2) => {
 //   return input1 + input2;
 // };
-
 // console.log(product(2, 2)); // 4
 // console.log(product(0, 2)); // 2
 
 // 3) this function takes in one parameter (a number from 1-7) and returns the day of the week (1 is Sunday, 2 is Monday, 3 is Tuesday etc.). If the number is less than 1 or greater than 7, the function should return undefined;
-
 // let printDay = (input) => {
 //   let dayNumbers = [1, 2, 3, 4, 5, 6, 7];
 //   let days = [
@@ -41,14 +38,25 @@
 
 //   return days[day];
 // };
-
 // console.log(printDay(7));
 
 // 4) this function takes in one parameter (an array) and returns the last value in the array. It should return undefined if the array is empty.
-
 // let lastElement = (arrInput) => {
 //   return arrInput.slice(-1)[0];
 //   // return arrInput.length;
 // };
-
 // console.log(lastElement([1, 2, 3, 4]));
+
+// 5) this function takes in two parameters (both numbers). If the first is greater than the second, this function returns "First is greater". If the second number is greater than the first, the function returns "Second is greater". Otherwise the function returns "Numbers are equal"
+// let numberCompare = (num1, num2) => {
+//   if (num1 > num2) {
+//     return "First is greater";
+//   } else if (num1 < num2) {
+//     return "Second is greater";
+//   } else {
+//     return "Numbers are equal";
+//   }
+// };
+// console.log(numberCompare(1, 1));
+// console.log(numberCompare(2, 1));
+// console.log(numberCompare(1, 2));
