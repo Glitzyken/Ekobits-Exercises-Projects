@@ -60,3 +60,22 @@
 // console.log(numberCompare(1, 1));
 // console.log(numberCompare(2, 1));
 // console.log(numberCompare(1, 2));
+
+// 6) this function takes in two parameters (two strings). The first parameter should be a word and the second should be a letter. The function returns the number of times that letter appears in the word. The function should be case insensitive (does not matter if the input is lowercase or uppercase). If the letter is not found in the word, the function should return 0.
+
+let singleLetterCount = (word, letter) => {
+  let letterCount = 0;
+
+  for (let eachLetter of word) {
+    if (
+      eachLetter === letter.toLowerCase() ||
+      eachLetter === letter.toUpperCase()
+    ) {
+      letterCount += 1;
+    }
+  }
+
+  return letterCount;
+};
+
+console.log(singleLetterCount("Amazing", "A"));
