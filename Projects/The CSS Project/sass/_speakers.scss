@@ -1,0 +1,81 @@
+.speakers {
+  width: 60%;
+  margin: auto;
+
+  &__section {
+    display: flex;
+    margin-bottom: 5rem;
+
+    &__left {
+      width: 70%;
+      margin-right: 3rem;
+    }
+
+    &__right {
+      padding-top: 6rem;
+    }
+  }
+
+  h2 {
+    color: $color-primary-light;
+  }
+
+  h4 {
+    margin-bottom: 1.5rem;
+  }
+
+  p {
+    margin-bottom: 1.3rem;
+  }
+}
+
+.profile {
+  width: 18rem;
+  height: 10rem;
+  border: 1px solid $color-gray;
+  border-radius: 5px;
+  text-align: center;
+
+  &__img {
+    width: 9rem;
+    height: 9rem;
+    border-radius: 50%;
+    margin-top: -5rem;
+    display: inline-block;
+
+    &--1 {
+      background: url("../images/aaron-irizarry.jpg");
+      background-position: center;
+      background-size: cover;
+    }
+
+    &--2 {
+      background: url("../images/adam-connor.jpg");
+      background-position: center;
+      background-size: cover;
+    }
+
+    &--3 {
+      background: url("../images/aj-self.jpg");
+      background-position: center;
+      background-size: cover;
+    }
+
+    &--4 {
+      background: url("../images/arman-ghosh.jpg");
+      background-position: center;
+      background-size: cover;
+    }
+
+    &--5 {
+      background: url("../images/candi-lemoine.jpg");
+      background-position: center;
+      background-size: cover;
+    }
+  }
+
+  &__name {
+    margin-top: 1.5rem;
+    line-height: 1.2rem;
+  }
+}

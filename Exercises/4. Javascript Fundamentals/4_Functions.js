@@ -1,6 +1,7 @@
 // Functions Exercises Part 1 - 3
 
-///////////////////////////// PART 1 ////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// PART 1 ////////////////////////////
+
 // 1) this function takes in two parameters and returns the difference of the two;
 // let difference = (input1, input2) => {
 //   return input1 - input2;
@@ -62,20 +63,38 @@
 // console.log(numberCompare(1, 2));
 
 // 6) this function takes in two parameters (two strings). The first parameter should be a word and the second should be a letter. The function returns the number of times that letter appears in the word. The function should be case insensitive (does not matter if the input is lowercase or uppercase). If the letter is not found in the word, the function should return 0.
+// let singleLetterCount = (word, letter) => {
+//   let letterCount = 0;
 
-let singleLetterCount = (word, letter) => {
+//   for (let eachLetter of word) {
+//     if (
+//       eachLetter === letter.toLowerCase() ||
+//       eachLetter === letter.toUpperCase()
+//     ) {
+//       letterCount += 1;
+//     }
+//   }
+
+//   return letterCount;
+// };
+
+// console.log(singleLetterCount("Amazing", "A"));
+// console.log(singleLetterCount("Inf-Paces School", "o"));
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// PART 2 ////////////////////////////
+
+// 1) this function takes in one parameter (a string) and returns an object with the keys being the letters and the values being the count of the letter.
+
+let multipleLetterCount = (word) => {
+  let obj = {};
   let letterCount = 0;
 
-  for (let eachLetter of word) {
-    if (
-      eachLetter === letter.toLowerCase() ||
-      eachLetter === letter.toUpperCase()
-    ) {
-      letterCount += 1;
-    }
+  for (let letter of word) {
+    letterCount += 1;
+    obj[letter] = letterCount;
   }
 
-  return letterCount;
+  return obj;
 };
 
-console.log(singleLetterCount("Amazing", "A"));
+console.log(multipleLetterCount("hello"));
