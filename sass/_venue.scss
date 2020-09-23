@@ -1,0 +1,25 @@
+.venue {
+  width: 60%;
+  margin: auto;
+  margin-bottom: 3rem;
+
+  &__theatre {
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__hotel {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  h2 {
+    color: $color-primary-light;
+  }
+}
+
+.venue-map {
+  height: 264px;
+  width: 35rem;
+}

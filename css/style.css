@@ -1,0 +1,351 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 100;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #a9b2b9; }
+
+.lesson-link {
+  background: #42444e;
+  border-bottom: 1px solid #31333a;
+  padding: 10px 30px 9px 30px; }
+  .lesson-link a {
+    color: #9799a7;
+    text-decoration: none; }
+    .lesson-link a:hover span {
+      color: #fff; }
+
+.gradient-section {
+  background: linear-gradient(to right, #a1d3b0, #f6f1d3);
+  padding: 44px 0 22px;
+  margin-bottom: 4rem; }
+  .gradient-section__container {
+    width: 80%;
+    margin: auto;
+    text-align: center; }
+  .gradient-section h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem; }
+  .gradient-section p {
+    width: 70%;
+    margin: auto;
+    font-size: 1.2rem; }
+
+.header {
+  width: 100%;
+  background: #293e4f;
+  color: #f6f1d3;
+  padding-bottom: 5rem; }
+  .header__content {
+    width: 60%;
+    margin: auto; }
+  .header__logo-and-nav {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between; }
+  .header__logo {
+    text-transform: uppercase;
+    padding-top: 2.2rem;
+    font-size: 2.5rem;
+    font-weight: 400;
+    line-height: 1;
+    border-top: 4px solid #648880; }
+  .header__navigation {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; }
+    .header__navigation__date {
+      color: #648880;
+      font-size: 1.3rem; }
+    .header__navigation__nav {
+      margin-top: 0.5rem; }
+      .header__navigation__nav--list {
+        display: flex;
+        list-style: none; }
+      .header__navigation__nav--item {
+        text-transform: uppercase;
+        color: #f6f1d3;
+        text-decoration: none; }
+        .header__navigation__nav--item:not(:last-child) {
+          margin-right: 1rem; }
+        .header__navigation__nav--item:hover {
+          color: #648880; }
+  .header__section {
+    background: #293e4f;
+    padding-bottom: 5rem; }
+    .header__section__content {
+      width: 60%;
+      margin: auto; }
+  .header__intro {
+    text-align: center;
+    padding-left: 3rem;
+    padding-right: 3rem; }
+    .header__intro__heading {
+      color: #648880; }
+    .header__intro__text {
+      font-size: 1.4rem; }
+  .header__cta {
+    margin-top: 3rem;
+    padding: 1rem 2rem;
+    font: inherit;
+    text-transform: uppercase;
+    background: transparent;
+    border: 1px solid #f6f1d3;
+    border-radius: 5px;
+    color: #f6f1d3;
+    cursor: pointer; }
+    .header__cta:hover {
+      background: #f6f1d3;
+      color: #648880; }
+
+.main {
+  width: 60%;
+  margin: auto;
+  padding: 3rem 0rem;
+  display: flex; }
+
+.card {
+  flex-grow: 1; }
+  .card:not(:last-child) {
+    margin-right: 2rem; }
+  .card__title {
+    margin-bottom: 1rem;
+    text-transform: uppercase; }
+  .card__header--img-1 {
+    width: 100%;
+    height: 13rem;
+    background: url("../images/speakers.jpg");
+    background-position: center;
+    background-size: cover;
+    border-radius: 7px;
+    cursor: pointer; }
+  .card__header--img-2 {
+    width: 100%;
+    height: 13rem;
+    background: url("../images/schedule.jpg");
+    background-position: center;
+    background-size: cover;
+    border-radius: 7px;
+    cursor: pointer; }
+  .card__header--img-3 {
+    width: 100%;
+    height: 13rem;
+    background: url("../images/venue.jpg");
+    background-position: center;
+    background-size: cover;
+    border-radius: 7px;
+    cursor: pointer; }
+  .card__header--heading {
+    margin-top: 1rem;
+    text-transform: capitalize;
+    font-size: 1.3rem; }
+  .card__header:hover .card__header--heading {
+    color: #648880; }
+  .card__preview {
+    margin-top: 1rem; }
+
+table {
+  margin-bottom: 44px;
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+thead {
+  line-height: 44px; }
+
+thead th {
+  color: #648880;
+  font-size: 24px; }
+
+th {
+  padding-right: 45px;
+  text-align: right;
+  width: 20%; }
+
+th,
+td {
+  padding-bottom: 22px;
+  vertical-align: top; }
+
+td {
+  width: 40%; }
+
+tbody td:only-of-type {
+  padding-left: 0;
+  padding-right: 0; }
+
+table a {
+  color: #888; }
+
+a {
+  color: #648880;
+  text-decoration: none; }
+
+tbody td {
+  border-top: 1px solid #dfe2e5;
+  padding-top: 21px; }
+
+.schedule-offset {
+  color: #a9b2b9; }
+
+.table-container {
+  width: 80%;
+  margin: auto; }
+
+.speakers {
+  width: 60%;
+  margin: auto; }
+  .speakers__section {
+    display: flex;
+    margin-bottom: 5rem; }
+    .speakers__section__left {
+      width: 70%;
+      margin-right: 3rem; }
+    .speakers__section__right {
+      padding-top: 6rem; }
+  .speakers h2 {
+    color: #648880; }
+  .speakers h4 {
+    margin-bottom: 1.5rem; }
+  .speakers p {
+    margin-bottom: 1.3rem; }
+
+.profile {
+  width: 18rem;
+  height: 10rem;
+  border: 1px solid #a9b2b9;
+  border-radius: 5px;
+  text-align: center; }
+  .profile__img {
+    width: 9rem;
+    height: 9rem;
+    border-radius: 50%;
+    margin-top: -5rem;
+    display: inline-block; }
+    .profile__img--1 {
+      background: url("../images/aaron-irizarry.jpg");
+      background-position: center;
+      background-size: cover; }
+    .profile__img--2 {
+      background: url("../images/adam-connor.jpg");
+      background-position: center;
+      background-size: cover; }
+    .profile__img--3 {
+      background: url("../images/aj-self.jpg");
+      background-position: center;
+      background-size: cover; }
+    .profile__img--4 {
+      background: url("../images/arman-ghosh.jpg");
+      background-position: center;
+      background-size: cover; }
+    .profile__img--5 {
+      background: url("../images/candi-lemoine.jpg");
+      background-position: center;
+      background-size: cover; }
+  .profile__name {
+    margin-top: 1.5rem;
+    line-height: 1.2rem; }
+
+.venue {
+  width: 60%;
+  margin: auto;
+  margin-bottom: 3rem; }
+  .venue__theatre {
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: space-between; }
+  .venue__hotel {
+    display: flex;
+    justify-content: space-between; }
+  .venue h2 {
+    color: #648880; }
+
+.venue-map {
+  height: 264px;
+  width: 35rem; }
+
+.register {
+  display: flex;
+  width: 80%;
+  margin: auto; }
+  .register__info {
+    width: 50%; }
+    .register__info h2 {
+      font-size: 1.5rem;
+      color: #648880; }
+    .register__info h5,
+    .register__info h4 {
+      font-size: 1.2rem; }
+    .register__info h4 {
+      color: #648880; }
+    .register__info .why-attend {
+      list-style: square;
+      margin: 0 0 22px 30px; }
+  .register__form {
+    width: 30%;
+    margin-left: 5rem; }
+    .register__form form {
+      margin-bottom: 22px; }
+    .register__form fieldset {
+      border: none; }
+    .register__form .register-group label {
+      color: #648880;
+      cursor: pointer;
+      font-weight: 400; }
+    .register__form .btn-default {
+      border: 0;
+      background: #648880;
+      padding: 11px 30px;
+      font-size: 14px; }
+    .register__form .btn {
+      border-radius: 5px;
+      color: #fff;
+      cursor: pointer;
+      display: inline-block;
+      font-weight: 400;
+      letter-spacing: 0.5px;
+      margin: 0;
+      text-transform: uppercase; }
+    .register__form .register-group input,
+    .register__form .register-group textarea {
+      width: 100%; }
+    .register__form .register-group input,
+    .register__form .register-group select,
+    .register__form .register-group textarea {
+      border: 1px solid #c6c9cc;
+      border-radius: 5px;
+      color: #888;
+      display: block;
+      margin: 5px 0 27px;
+      padding: 5px 8px; }
+
+.footer {
+  background: #293e4f;
+  padding: 3rem 0rem; }
+  .footer__content {
+    width: 60%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end; }
+  .footer__copyright {
+    color: #648880;
+    text-transform: capitalize; }
+  .footer__nav {
+    margin-top: 0.5rem; }
+    .footer__nav--list {
+      display: flex;
+      list-style: none; }
+    .footer__nav--item {
+      color: #f6f1d3;
+      text-decoration: none;
+      font-size: 0.9rem; }
+      .footer__nav--item:not(:last-child) {
+        margin-right: 1rem; }
+      .footer__nav--item:hover {
+        color: #648880; }
