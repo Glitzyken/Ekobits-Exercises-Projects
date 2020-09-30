@@ -114,5 +114,12 @@
 
     displayEvenNumbers();
 
-    (1) let i = 1, not 0 (2) 'i <= numbers.length' (3) remove -1 in front of numbers.length (4) remove semi-colon in front of i++ (5) inside if() statement, replace 'numbers' with 'i' (6) replace '=' with '===' (7) delete the ';' behind the if() bracket (8) move 'return evenNumbers;' from the 'for' block to the function block
+    (1) let i = 1, not 0
+    (2) make 'i <= numbers.length'
+    (3) remove -1 in front of numbers.length
+    (4) remove semi-colon in front of i++
+    (5) inside if() statement, replace 'numbers' with 'i'
+    (6) replace '=' with '==='
+    (7) delete the ';' behind the if() bracket
+    (8) move 'return evenNumbers;' from the 'for' block to the function block
    ```
