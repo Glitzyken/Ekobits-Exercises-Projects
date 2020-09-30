@@ -64,10 +64,55 @@
    }
 
     function addIfEven(num){
-      if(num % 2 = 0){
+      if(num % 2 === 0){
       return num + 5;
       }
     }
 
-    the 'return' statement inside the 'if' statement should suffice
+    it should be the strict equality operator '===' inside the if() statement and the 'return' statement inside the 'if' statement should suffice
+   ```
+
+3. ```
+   function loopToFive(){
+       for(let i=0, i < 5, i++){
+           console.log(i);
+       }
+   }
+
+   function loopToFive(){
+       for(let i=0; i < 5; i++){
+           console.log(i);
+       }
+   }
+
+   The syntax should be semicolons (;) and not commas (,)
+   ```
+
+4. ```
+    function displayEvenNumbers(){
+      let numbers = [1,2,3,4,5,6,7,8];
+      let evenNumbers = [];
+      for(let i=0; i<numbers.length-1; i++;){
+          if(numbers % 2 = 0); {
+              evenNumbers.push(i);
+          }
+          return evenNumbers;
+      }
+    }
+    displayEvenNumbers();
+
+    function displayEvenNumbers() {
+      let numbers = [1, 2, 3, 4, 5, 6, 7, 8];
+      let evenNumbers = [];
+      for (let i = 1; i <= numbers.length; i++) {
+        if (i % 2 === 0) {
+          evenNumbers.push(i);
+        }
+      }
+      return evenNumbers;
+    }
+
+    displayEvenNumbers();
+
+    (1) let i = 1, not 0 (2) 'i <= numbers.length' (3) remove -1 in front of numbers.length (4) remove semi-colon in front of i++ (5) inside if() statement, replace 'numbers' with 'i' (6) replace '=' with '===' (7) delete the ';' behind the if() bracket (8) move 'return evenNumbers;' from the 'for' block to the function block
    ```
