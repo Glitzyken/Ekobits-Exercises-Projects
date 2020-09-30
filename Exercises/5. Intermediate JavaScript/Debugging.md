@@ -44,30 +44,30 @@
 ## Fix the broken code and explain what was wrong:
 
 1. ```
-         for(let i=0; i > 5; i++){
-             console.log(i);
-         }
+   for(let i=0; i > 5; i++){
+      console.log(i);
+   }
 
+    for(let i=0; i < 5; i++){
+      console.log(i);
+    }
 
-         for(let i=0; i < 5; i++){
-             console.log(i);
-         }
+    'i' should be less than '<' 5
    ```
 
-   `i` should be less than `<` 5
+2. ```
+   function addIfEven(num){
+      if(num % 2 = 0){
+          return num + 5;
+      }
+      return num;
+   }
 
-2. ```function addIfEven(num){
-         if(num % 2 = 0){
-             return num + 5;
-         }
-         return num;
-     }
+    function addIfEven(num){
+      if(num % 2 = 0){
+      return num + 5;
+      }
+    }
 
-     function addIfEven(num){
-         if(num % 2 = 0){
-             return num + 5;
-         }
-     }
-
-     the `return` statement inside the `if` statement should suffice
+    the 'return' statement inside the 'if' statement should suffice
    ```
