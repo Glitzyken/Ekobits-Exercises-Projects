@@ -43,6 +43,16 @@
 
 ## Fix the broken code and explain what was wrong:
 
-1. `for(let i=0; i > 5; i++){ console.log(i); }`
+1. ```
+   wrong:
 
-Fix: `for(let i=0; i < 5; i++){ console.log(i); }`
+      for(let i=0; i > 5; i++){
+          console.log(i);
+      }
+
+      correct:
+
+      for(let i=0; i < 5; i++){
+          console.log(i);
+      }
+   ```
