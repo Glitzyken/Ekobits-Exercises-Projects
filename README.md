@@ -1,3 +1,3 @@
-# EKOBIT CSS ASSIGNMENT
+# EKOBIT CSS MILESTONE ASSIGNMENTS
 
-Main Focus: Flexbox
+## Links to Codepen versions:
