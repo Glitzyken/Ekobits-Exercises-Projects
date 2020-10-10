@@ -50,13 +50,52 @@
 // 3) isEven
 // Write a function called isEven which takes in a number and returns true if the number is even and returns false if it is not
 
-const isEven = (num) => {
+const isEven = num => {
   if (num % 2 === 0) {
-    console.log('True')
+   return true
   } else {
-    console.log('False')
+    return false
   }
 };
 
-isEven(2); // true
-isEven(3); // false
+// console.log(isEven(2)); // true
+// console.log(isEven(3)); // false
+
+// 4) isOdd
+// Write a function called isOdd which takes in a number and returns true if the number is odd and returns false if it is not
+
+const isOdd = (num) => {
+  if (num % 2 === 1) {
+    return true;
+  } else {
+    return false;
+  }
+};
+
+// console.log(isOdd(3)); // true
+// console.log(isOdd(14)); // false
+
+// 5) isPrime
+// Write a function called isPrime which takes in a number and returns true if the number is a prime number (is greater than 1 and can only be divided in whole by itself and 1), otherwise returns false
+
+const isPrime = num => {
+  for (let i = 2; i < num; i++) {
+    if(num % i === 0) return false;
+  }
+  return num > 1;
+};
+
+// console.log(isPrime(8)); // false
+// console.log(isPrime(17)); // true
+// console.log(isPrime(2)); // true
+
+// 6) numberFact
+// Write a function called numberFact which takes in a number and a callback and returns the result of the callback with the number passed to it
+
+const numberFact = (num, fn) => {
+  return fn(num);
+}
+
+console.log(numberFact(59,isEven)); // false
+console.log(numberFact(59,isOdd)); // true
+console.log(numberFact(59,isPrime)); // true
