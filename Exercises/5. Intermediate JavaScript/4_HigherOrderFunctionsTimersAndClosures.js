@@ -6,6 +6,9 @@ const countdown = (num) => {
 
   for (let i = 0; i < num; i++) {
     makeNumArr.push(i);
+    if (i === 0) {
+      makeNumArr.push('Done!')
+    }
 
     setTimeout(function () {
       console.log(makeNumArr.pop());
