@@ -21,6 +21,8 @@
 // console.log(rotate([1, 2, 3], 2)); // [2,3,1]
 // console.log(rotate([1, 2, 3], 3)); // [1,2,3]
 
+//////////////////////////////////////////////////////////////////////////////////////////////
+
 // 2) Write a function called makeXOGrid which takes in two parameters, rows and columns, and returns an array of arrays with the number of values in each subarray equal to the columns parameter and the number of subarrays equal to the rows parameter. The values in the sub-arrays should switch between "X" and "O".
 
 const makeXOGrid = (rows, columns) => {

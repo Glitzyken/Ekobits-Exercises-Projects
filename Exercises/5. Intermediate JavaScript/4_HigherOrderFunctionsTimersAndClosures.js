@@ -23,6 +23,8 @@
 
 // countdown(4);
 
+//////////////////////////////////////////////////////////////////////////////////////////////
+
 // 2) randomGame
 // Write a function called randomGame that selects a random number between 0 and 1 every 1000 milliseconds and each time that a random number is picked, add 1 to a counter. If the number is greater than .75, stop the timer and return the number of tries it took before we found a number greater than .75.
 
@@ -47,16 +49,18 @@
 
 // randomGame();
 
+//////////////////////////////////////////////////////////////////////////////////////////////
+
 // 3) isEven
 // Write a function called isEven which takes in a number and returns true if the number is even and returns false if it is not
 
-const isEven = num => {
-  if (num % 2 === 0) {
-   return true
-  } else {
-    return false
-  }
-};
+// const isEven = num => {
+//   if (num % 2 === 0) {
+//    return true
+//   } else {
+//     return false
+//   }
+// };
 
 // console.log(isEven(2)); // true
 // console.log(isEven(3)); // false
@@ -64,38 +68,75 @@ const isEven = num => {
 // 4) isOdd
 // Write a function called isOdd which takes in a number and returns true if the number is odd and returns false if it is not
 
-const isOdd = (num) => {
-  if (num % 2 === 1) {
-    return true;
-  } else {
-    return false;
-  }
-};
+// const isOdd = (num) => {
+//   if (num % 2 === 1) {
+//     return true;
+//   } else {
+//     return false;
+//   }
+// };
 
 // console.log(isOdd(3)); // true
 // console.log(isOdd(14)); // false
 
+//////////////////////////////////////////////////////////////////////////////////////////////
+
 // 5) isPrime
 // Write a function called isPrime which takes in a number and returns true if the number is a prime number (is greater than 1 and can only be divided in whole by itself and 1), otherwise returns false
 
-const isPrime = num => {
-  for (let i = 2; i < num; i++) {
-    if(num % i === 0) return false;
-  }
-  return num > 1;
-};
+// const isPrime = num => {
+//   for (let i = 2; i < num; i++) {
+//     if(num % i === 0) return false;
+//   }
+//   return num > 1;
+// };
 
 // console.log(isPrime(8)); // false
 // console.log(isPrime(17)); // true
 // console.log(isPrime(2)); // true
 
+//////////////////////////////////////////////////////////////////////////////////////////////
+
 // 6) numberFact
 // Write a function called numberFact which takes in a number and a callback and returns the result of the callback with the number passed to it
 
-const numberFact = (num, fn) => {
-  return fn(num);
-}
+// const numberFact = (num, fn) => {
+//   return fn(num);
+// }
 
-console.log(numberFact(59,isEven)); // false
-console.log(numberFact(59,isOdd)); // true
-console.log(numberFact(59,isPrime)); // true
+// console.log(numberFact(59,isEven)); // false
+// console.log(numberFact(59,isOdd)); // true
+// console.log(numberFact(59,isPrime)); // true
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+
+// 7) find
+// Write a function called find. It should take in an array and a callback and return the first value found in the array that matches the condition.
+
+// const find = (array, fn) => {
+//   for (arr of array) {
+//     if (fn(arr)) {
+//       return arr
+//     }
+//   }
+// }
+
+// console.log(find([8,11,4,27], function(val){return val >= 10})); // 11
+// console.log(find([8,11,4,27], function(val){return val === 5})); // undefined
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+
+// 8) findIndex
+// Write a function called findIndex. It should take in an array and a callback and return the index of first value found in the array that matches the condition.
+
+// const findIndex = (array, fn) => {
+//     for (arr of array) {
+//     if (fn(arr)) {
+//       return array.indexOf(arr)
+//     }
+//   }
+// }
+
+// console.log(findIndex([8,11,4,27], function(val){return val >= 10})); // 1
+// console.log(findIndex([8,11,4,27], function(val){return val === 7})); // undefined
+
