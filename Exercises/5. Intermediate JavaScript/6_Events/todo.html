@@ -1,0 +1,194 @@
+<!--
+    Part 3
+    
+    For this assignment you will be combining your knowledge of DOM access and events to build a todo app!
+
+    As a user, you should be able to:
+
+    Add a new todo (by submitting a form)
+    Mark a todo as completed (cross out the text of the todo)
+    Remove a todo
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+      }
+
+      ul li {
+        cursor: pointer;
+        position: relative;
+        padding: 12px 8px 12px 40px;
+        background: #c7ecee;
+        font-size: 18px;
+        transition: 0.2s;
+        user-select: none;
+      }
+
+      ul li:nth-child(odd) {
+        background: #f9f9f9;
+      }
+
+      ul li:hover {
+        background: #dff9fb;
+      }
+
+      ul li.checked {
+        background: #130f40;
+        color: #fff;
+        text-decoration: line-through;
+      }
+
+      ul li.checked::before {
+        content: "";
+        position: absolute;
+        border-color: #fff;
+        border-style: solid;
+        border-width: 0 2px 2px 0;
+        top: 10px;
+        left: 16px;
+        transform: rotate(45deg);
+        height: 15px;
+        width: 7px;
+      }
+      .container {
+        width: 60%;
+        margin: auto;
+      }
+
+      .close {
+        position: absolute;
+        right: 0;
+        top: 0;
+        padding: 12px 16px 12px 16px;
+      }
+
+      .close:hover {
+        background-color: #f44336;
+        color: white;
+      }
+
+      .header {
+        background-color: #10ac84;
+        padding: 30px 40px;
+        color: white;
+        text-align: center;
+      }
+
+      .header:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+
+      input {
+        margin: 0;
+        border: none;
+        border-radius: 0;
+        width: 75%;
+        padding: 10px;
+        float: left;
+        font-size: 16px;
+      }
+
+      .addBtn {
+        padding: 10px;
+        width: 25%;
+        background: #222f3e;
+        color: #fff;
+        float: left;
+        text-align: center;
+        font-size: 16px;
+        cursor: pointer;
+        transition: 0.3s;
+        border-radius: 0;
+      }
+
+      .addBtn:hover {
+        background-color: #576574;
+      }
+    </style>
+    <title>To Do</title>
+  </head>
+  <body>
+    <div class="container">
+      <div id="header" class="header">
+        <h2>My To Do List</h2>
+        <input type="text" id="input" placeholder="Enter title..." />
+        <span onclick="newElement()" class="addBtn">Add</span>
+      </div>
+
+      <ul id="ul">
+        <li>Initial Entry 1</li>
+        <li>Initial Entry 2</li>
+      </ul>
+    </div>
+
+    <script>
+      // Create a "close" button and append it to each list item
+      let listOfLIs = document.querySelectorAll("li");
+      for (let i = 0; i < listOfLIs.length; i++) {
+        let span = document.createElement("span");
+        let xSign = document.createTextNode("\u00D7"); // \u00D7 is a unicode character for multiplication sign
+        span.className = "close";
+        span.appendChild(xSign);
+        listOfLIs[i].appendChild(span);
+      }
+      
+       // Click on a close button to hide the current list item
+       const closeWithXSign = () => {
+        let close = document.querySelectorAll(".close");
+        for (let i = 0; i < close.length; i++) {
+          close[i].onclick = function () {
+            let div = this.parentElement;
+            div.style.display = "none";
+          };
+        }
+      };
+
+      // Add the "checked" class when clicking on a list item
+      let list = document.querySelector("ul");
+      list.addEventListener("click", function (event) {
+        event.target.classList.toggle("checked");
+      });
+
+      // Create a new list item on clicking on the "Add" button
+      let newElement = () => {
+        let li = document.createElement("li");
+        let inputValue = document.getElementById("input").value;
+        let text = document.createTextNode(inputValue);
+        li.appendChild(text);
+
+        if (inputValue === "") {
+          alert("You must write something!");
+        } else {
+          document.querySelector("#ul").appendChild(li);
+        }
+
+        document.querySelector("#input").value = ""; // returns the input field back to empty
+
+        // Create a "close" button agian and append it to the newly created item
+        let span = document.createElement("span");
+        let xSign = document.createTextNode("\u00D7");
+        span.className = "close";
+        span.appendChild(xSign);
+        li.appendChild(span);
+        
+        closeWithXSign();
+      };
+      
+      closeWithXSign();
+    </script>
+  </body>
+</html>
