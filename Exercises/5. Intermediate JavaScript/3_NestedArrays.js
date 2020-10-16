@@ -28,19 +28,18 @@
 const makeXOGrid = (rows, columns) => {
   // initialize an empty array
   // initialize an empty subArray
-  // initialize two variables and assign them to the values of 'X' and 'O' respectively
+  // initialize a variable and assign it to true
   // doing a for loop, at each iteration, push 'X' and 'O' values to subArray however many times the number provided as argument to the second parameter
   // doing another for loop, at each iteration, push subArray to array however many times the number provided as argument to the first parameter
   //   return array
 
   let array = [];
   let subArray = [];
-  let xoArray = ["X", "O", "X", "O", "X", "O", "X", "O"];
-  //   let x = "X";
-  //   let o = "O";
+  let xo = true;
 
   for (let i = 0; i < columns; i++) {
-    subArray.push(xoArray[i]);
+    xo = !xo
+    subArray.push(xo ? 'O' : 'X');
   }
 
   for (let j = 0; j < rows; j++) {
