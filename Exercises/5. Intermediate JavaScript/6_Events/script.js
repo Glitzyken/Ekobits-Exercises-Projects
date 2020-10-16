@@ -41,9 +41,12 @@ race = () => {
   position2 = Math.round(Math.random() * 11);
 
   function frame() {
-    if (position1 == 99 || position2 == 99) {
+    if (position1 == 99) {
       clearInterval(animate);
-      alert('winner');
+      alert('Car1 is the winner!');
+    } else if (position2 == 99) {
+      clearInterval(animate);
+      alert('Car2 is the winner!');
     } else {
       position1++;
       position2++;
