@@ -60,12 +60,10 @@ HTTP response involves a computer responding and returning some requested inform
 HTTP headers let the client and the server pass additional information with an HTTP request or response.
 Examples:
 
-    ```
-        Request Method: GET
-        Status Code: 200
-        Remote Address: 216.58.223.228:443
-        Referrer Policy: origin
-    ```
+    Request Method: GET
+    Status Code: 200
+    Remote Address: 216.58.223.228:443
+    Referrer Policy: origin
 
 ### What is REST?
 
