@@ -102,28 +102,53 @@ let users = [
 // findHometownByState("CA");
 
 // 4. Write a function called allLanguages which returns an array of all of the unique values
-const allLanguages = () => {
-  // init new array
-  // loop
-  // per iteration, store all users favoriteLanguage arrays in new array
-  // loop through new array
-  // init another array
-  // for each array, push value to another array if value is unique
-  // return another array
+// const allLanguages = () => {
+//   // init new array
+//   // loop
+//   // per iteration, store all users favoriteLanguage arrays in new array
+//   // loop through new array
+//   // init another array
+//   // for each array, push value to another array if value is unique
+//   // return another array
 
-  let usersLanguages = [];
-  let languageList = [];
+//   let usersLanguages = [];
+//   let languageList = [];
 
-  users.forEach((user) => {
-    usersLanguages = user.favoriteLanguages;
+//   users.forEach((user) => {
+//     usersLanguages = user.favoriteLanguages;
 
-    usersLanguages.forEach((val) => {
-      languageList.push(val);
-    });
-  });
+//     usersLanguages.forEach((val) => {
+//       languageList.push(val);
+//     });
+//   });
 
-  console.log([...new Set(languageList)]);
-  return [...new Set(languageList)];
+//   console.log([...new Set(languageList)]);
+//   return [...new Set(languageList)];
+// };
+
+// allLanguages();
+
+// 5. Write a function called hasFavoriteEditor which returns a boolean if any of the users have the editor passed in
+// const hasFavoriteEditor = (editor) => {
+//   // initialize an evaluator variable
+//   // filter users array for matching editor
+//   // return true if evaluator has at least 1 value. Else, return false
+//   let evaluator = [];
+//   evaluator = users.filter((user) => user.favoriteEditor === editor);
+
+//   if (evaluator.length > 0) {
+//     return true;
+//   } else {
+//     return false;
+//   }
+// };
+
+// console.log(hasFavoriteEditor("VS Code")); // true
+// console.log(hasFavoriteEditor("Eclipse")); // false
+
+// 6. Write a function called findByUsername which takes in a string and returns an object in the users array that has that username
+const findByUsername = (username) => {
+  return users.filter((user) => user.username === username);
 };
 
-allLanguages();
+console.log(findByUsername("david"));
