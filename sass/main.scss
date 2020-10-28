@@ -1,11 +1,43 @@
 @import "./variables";
-@import "./base";
+@import "./reset";
+@import "./layout/header";
+@import "./utility/card";
 
-@import "./utils";
-@import "./header";
-@import "./home";
-@import "./schedule";
-@import "./speakers";
-@import "./venue";
-@import "./register";
-@import "./footer";
+body {
+  color: $white;
+  background: $gray;
+  font-family: "Roboto", sans-serif;
+  margin: 5rem 0 5rem 0;
+}
+
+.main {
+  width: 80%;
+  margin: auto;
+  background: $dark-gray-1;
+  border-radius: 10px;
+}
+
+.events {
+  margin: 5rem;
+  display: grid;
+  grid-template-rows: repeat(1, 30rem);
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+  grid-auto-rows: 30rem;
+}
+
+.footer {
+  width: 100%;
+  height: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  a {
+    text-decoration: none;
+    color: $purple;
+    font-weight: 700;
+    margin-left: 0.3rem;
+    margin-right: 0.3rem;
+  }
+}
