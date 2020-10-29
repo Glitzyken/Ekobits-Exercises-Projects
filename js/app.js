@@ -3,7 +3,7 @@ const elements = {
   body: document.querySelector('body'),
   header: document.querySelector('.header'),
   applyBtns: document.querySelectorAll('.apply-btn'),
-  cards: document.querySelectorAll('.card'),
+  premiumBtns: document.querySelectorAll('.premium-btn'),
 };
 
 // Functions
@@ -62,19 +62,6 @@ elements.applyBtns.forEach((btn) => {
           .children[1].firstElementChild.children[3].innerHTML,
     };
 
-    // console.log(event);
-    // console.log(
-    //   event.target.parentElement.parentElement.parentElement.firstElementChild
-    //     .classList[2]
-    // );
-
-    // if (
-    //   event.target.parentElement.parentElement.parentElement.firstElementChild
-    //     .classList[2] === 'premium'
-    // ) {
-    //   showAlert('premium', 'Sorry, this is a premium event.');
-    // }
-
     showAlert('success', 'You have registered successfully!');
 
     showCurrentEvent(
@@ -84,5 +71,20 @@ elements.applyBtns.forEach((btn) => {
       cardData.deadline,
       cardData.briefing
     );
+  });
+});
+
+// on premium-btn button click
+elements.premiumBtns.forEach((btn) => {
+  btn.addEventListener('click', (event) => {
+    showAlert('premium', 'Sorry, this is only for premium members!');
+
+    document.querySelector('.header h1').style.display = 'none';
+
+    const markup = `<h2>
+    Become a <span class="glow-premium"> PREMIUM </span> member today!
+  </h2>`;
+
+    elements.header.innerHTML = markup;
   });
 });
