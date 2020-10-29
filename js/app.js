@@ -6,14 +6,6 @@ const elements = {
   cards: document.querySelectorAll('.card'),
 };
 
-const cardData = {
-  title: document.querySelector('.card .title').innerText,
-  date: document.querySelector('.card .date').innerHTML,
-  venue: document.querySelector('.card .venue').innerHTML,
-  deadline: document.querySelector('.card .deadline').innerHTML,
-  briefing: document.querySelector('.card .briefing').innerHTML,
-};
-
 // Functions
 const hideAlert = () => {
   const el = document.querySelector('.alert');
@@ -48,8 +40,41 @@ const showCurrentEvent = (title, date, venue, deadline, briefing) => {
 };
 
 // Event Listeners
+
+// on apply-btn button click
 elements.applyBtns.forEach((btn) => {
-  btn.addEventListener('click', () => {
+  btn.addEventListener('click', (event) => {
+    const cardData = {
+      title:
+        event.target.parentElement.parentElement.parentElement.firstElementChild
+          .firstElementChild.children[1].innerText,
+      date:
+        event.target.parentElement.parentElement.parentElement.firstElementChild
+          .children[1].firstElementChild.children[0].innerHTML,
+      venue:
+        event.target.parentElement.parentElement.parentElement.firstElementChild
+          .children[1].firstElementChild.children[1].innerHTML,
+      deadline:
+        event.target.parentElement.parentElement.parentElement.firstElementChild
+          .children[1].firstElementChild.children[2].innerHTML,
+      briefing:
+        event.target.parentElement.parentElement.parentElement.firstElementChild
+          .children[1].firstElementChild.children[3].innerHTML,
+    };
+
+    // console.log(event);
+    // console.log(
+    //   event.target.parentElement.parentElement.parentElement.firstElementChild
+    //     .classList[2]
+    // );
+
+    // if (
+    //   event.target.parentElement.parentElement.parentElement.firstElementChild
+    //     .classList[2] === 'premium'
+    // ) {
+    //   showAlert('premium', 'Sorry, this is a premium event.');
+    // }
+
     showAlert('success', 'You have registered successfully!');
 
     showCurrentEvent(
