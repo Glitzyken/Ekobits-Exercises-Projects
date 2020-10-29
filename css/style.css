@@ -38,6 +38,36 @@ blockquote {
   .header h1 {
     font-size: 5rem;
     font-weight: 700; }
+  .header h2 {
+    font-size: 3rem;
+    font-weight: 700; }
+  .header h3 {
+    font-size: 1.5rem;
+    font-weight: 100;
+    text-transform: uppercase; }
+  .header__dynamic {
+    padding: 2rem; }
+
+.alert {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  z-index: 9999;
+  color: #fff;
+  font-size: 1.8rem;
+  font-weight: 400;
+  text-align: center;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  padding: 1.6rem 15rem;
+  -webkit-box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.25);
+  box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.25); }
+  .alert--success {
+    background: #328076; }
+  .alert--premium {
+    background: #ff7b43; }
 
 .card {
   perspective: 150rem;
@@ -159,3 +189,9 @@ body {
     font-weight: 700;
     margin-left: 0.3rem;
     margin-right: 0.3rem; }
+
+.next-event {
+  margin: 5rem 10rem;
+  font-size: 2rem;
+  font-weight: 100;
+  text-transform: uppercase; }

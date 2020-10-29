@@ -14,9 +14,23 @@
     <main class="main">
       <header class="header">
         <h1>Events VanHack</h1>
+        <!-- <div class="header__dynamic">
+          <h3>Your current event</h3>
+          <h2>Four steps to increase your chances to get hired</h2>
+          <div>
+            <p><span>📅 Date:</span> November 3, 2020</p>
+            <p><span>🗺 Location:</span> Vancouver, Canada</p>
+            <p><span>😱 Deadline:</span> 11/02/2020</p>
+            <p>
+              <span>🥘 Briefing:</span> VanHack is holding a Virtual meeting
+              event to teach you four steps to increase your chances to get
+              hired...
+            </p>
+          </div>
+        </div> -->
       </header>
 
-      <section>
+      <section class="next-event">
         <h1>Next Events</h1>
       </section>
 
@@ -25,14 +39,16 @@
           <div class="card__side card__side--front">
             <div class="card__event__header">
               <div class="card__event__type">#leap</div>
-              <h2>Four steps to increase your chances to get hired</h2>
+              <h2 class="title">
+                Four steps to increase your chances to get hired
+              </h2>
             </div>
             <div class="card__event">
               <div class="card__event__overview">
-                <p><span>📅 Date:</span> November 3, 2020</p>
-                <p><span>🗺 Location:</span> Vancouver, Canada</p>
-                <p><span>😱 Deadline:</span> 11/02/2020</p>
-                <p>
+                <p class="date"><span>📅 Date:</span> November 3, 2020</p>
+                <p class="venue"><span>🗺 Location:</span> Vancouver, Canada</p>
+                <p class="deadline"><span>😱 Deadline:</span> 11/02/2020</p>
+                <p class="briefing">
                   <span>🥘 Briefing:</span> VanHack is holding a Virtual meeting
                   event to teach you four steps to increase your chances to get
                   hired...
@@ -408,6 +424,6 @@
       </footer>
     </main>
 
-    <script src="js/app.js"></script>
+    <script src="./js/app.js"></script>
   </body>
 </html>

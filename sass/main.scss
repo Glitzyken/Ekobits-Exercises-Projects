@@ -1,6 +1,7 @@
 @import "./variables";
 @import "./reset";
 @import "./layout/header";
+@import "./utility/alert";
 @import "./utility/card";
 
 body {
@@ -40,4 +41,11 @@ body {
     margin-left: 0.3rem;
     margin-right: 0.3rem;
   }
+}
+
+.next-event {
+  margin: 5rem 10rem;
+  font-size: 2rem;
+  font-weight: 100;
+  text-transform: uppercase;
 }
