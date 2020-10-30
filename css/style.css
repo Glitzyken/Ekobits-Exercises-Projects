@@ -69,6 +69,75 @@ blockquote {
   .alert--premium {
     background: #ff7b43; }
 
+.readMore {
+  font-family: inherit;
+  font-size: 1.2rem;
+  color: #dcdde1;
+  background: none;
+  border: none;
+  border-bottom: 1px solid #ff7b43;
+  cursor: pointer; }
+  .readMore div {
+    display: inline-block;
+    transition: all 0.2s; }
+  .readMore:hover div {
+    transform: translateX(30%); }
+
+.apply-btn {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font: inherit;
+  padding: 0.5rem 3rem;
+  border: none;
+  border-radius: 5rem;
+  background: #328076;
+  color: #dcdde1;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.2s; }
+  .apply-btn:hover {
+    padding: 0.5rem 4rem; }
+  .apply-btn:focus {
+    outline: none; }
+
+.premium-btn {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font: inherit;
+  padding: 0.5rem 3rem;
+  border: none;
+  border-radius: 5rem;
+  background: #ff7b43;
+  color: #dcdde1;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.2s; }
+  .premium-btn:hover {
+    padding: 0.5rem 4rem; }
+  .premium-btn:focus {
+    outline: none; }
+
+.premium {
+  background: #ff7b43 !important; }
+
+.glow-premium {
+  font-size: 4rem;
+  font-weight: 900;
+  color: #dcdde1;
+  -webkit-animation: glow-premium 1s ease-in-out infinite alternate;
+  -moz-animation: glow-premium 1s ease-in-out infinite alternate;
+  animation: glow-premium 1s ease-in-out infinite alternate; }
+
+@-webkit-keyframes glow-premium {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ff7b43, 0 0 40px #ff7b43, 0 0 50px #ff7b43, 0 0 60px #ff7b43, 0 0 70px #ff7b43; }
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff7b43, 0 0 40px #ff7b43, 0 0 50px #ff7b43, 0 0 60px #ff7b43, 0 0 70px #ff7b43, 0 0 80px #ff7b43; } }
+
 .card {
   perspective: 150rem;
   -moz-perspective: 150rem;
@@ -135,65 +204,10 @@ blockquote {
   .card:hover .card__side--back {
     transform: rotateY(0); }
 
-.apply-btn {
-  position: fixed;
-  bottom: 0;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font: inherit;
-  padding: 0.5rem 3rem;
-  border: none;
-  border-radius: 5rem;
-  background: #328076;
-  color: #dcdde1;
-  text-transform: uppercase;
-  cursor: pointer;
-  transition: all 0.2s; }
-  .apply-btn:hover {
-    padding: 0.5rem 4rem; }
-  .apply-btn:focus {
-    outline: none; }
-
-.premium-btn {
-  position: fixed;
-  bottom: 0;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font: inherit;
-  padding: 0.5rem 3rem;
-  border: none;
-  border-radius: 5rem;
-  background: #ff7b43;
-  color: #dcdde1;
-  text-transform: uppercase;
-  cursor: pointer;
-  transition: all 0.2s; }
-  .premium-btn:hover {
-    padding: 0.5rem 4rem; }
-  .premium-btn:focus {
-    outline: none; }
-
-.premium {
-  background: #ff7b43 !important; }
-
-.glow-premium {
-  font-size: 4rem;
-  font-weight: 900;
-  color: #dcdde1;
-  -webkit-animation: glow-premium 1s ease-in-out infinite alternate;
-  -moz-animation: glow-premium 1s ease-in-out infinite alternate;
-  animation: glow-premium 1s ease-in-out infinite alternate; }
-
-@-webkit-keyframes glow-premium {
-  from {
-    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ff7b43, 0 0 40px #ff7b43, 0 0 50px #ff7b43, 0 0 60px #ff7b43, 0 0 70px #ff7b43; }
-  to {
-    text-shadow: 0 0 20px #fff, 0 0 30px #ff7b43, 0 0 40px #ff7b43, 0 0 50px #ff7b43, 0 0 60px #ff7b43, 0 0 70px #ff7b43, 0 0 80px #ff7b43; } }
-
 body {
   color: #dcdde1;
   background: #3a3d49;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   margin: 5rem 0 5rem 0; }
 
 .main {

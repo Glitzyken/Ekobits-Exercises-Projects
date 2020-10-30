@@ -81,9 +81,14 @@ elements.premiumBtns.forEach((btn) => {
 
     document.querySelector('.header h1').style.display = 'none';
 
-    const markup = `<h2>
+    const markup = `<div><h2>
     Become a <span class="glow-premium"> PREMIUM </span> member today!
-  </h2>`;
+  </h2>
+  <button class="readMore">
+    Read More
+    <div>&rarr;</div>
+  </button>
+</div>`;
 
     elements.header.innerHTML = markup;
   });
