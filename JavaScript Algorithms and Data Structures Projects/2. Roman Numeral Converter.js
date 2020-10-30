@@ -1,4 +1,4 @@
-let convertToRoman = function (num) {
+let convertToRoman = (num) => {
   let decimalValue = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1];
   let romanNumeral = [
     "M",
@@ -18,14 +18,18 @@ let convertToRoman = function (num) {
 
   let romanized = "";
 
-  for (var index = 0; index < decimalValue.length; index++) {
-    while (decimalValue[index] <= num) {
-      romanized += romanNumeral[index];
-      num -= decimalValue[index];
+  for (let i = 0; i < decimalValue.length; i++) {
+    while (decimalValue[i] <= num) {
+      romanized += romanNumeral[i];
+      num -= decimalValue[i];
     }
   }
 
   return romanized;
 };
 
-convertToRoman(36);
+console.log(convertToRoman(36));
+console.log(convertToRoman(798));
+console.log(convertToRoman(500));
+console.log(convertToRoman(16));
+console.log(convertToRoman(44));
