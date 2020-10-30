@@ -8,7 +8,7 @@ var denom = [
   { name: "QUARTER", val: 0.25 },
   { name: "DIME", val: 0.1 },
   { name: "NICKEL", val: 0.05 },
-  { name: "PENNY", val: 0.01 }
+  { name: "PENNY", val: 0.01 },
 ];
 
 function checkCashRegister(price, cash, cid) {
@@ -17,7 +17,7 @@ function checkCashRegister(price, cash, cid) {
 
   // Transform CID array into drawer object
   var register = cid.reduce(
-    function(acc, curr) {
+    function (acc, curr) {
       acc.total += curr[1];
       acc[curr[0]] = curr[1];
       return acc;
@@ -39,7 +39,7 @@ function checkCashRegister(price, cash, cid) {
   }
 
   // Loop through the denomination array
-  var change_arr = denom.reduce(function(acc, curr) {
+  var change_arr = denom.reduce(function (acc, curr) {
     var value = 0;
     // While there is still money of this type in the drawer
     // And while the denomination is larger than the change remaining
@@ -81,5 +81,5 @@ checkCashRegister(19.5, 20.0, [
   ["FIVE", 55.0],
   ["TEN", 20.0],
   ["TWENTY", 60.0],
-  ["ONE HUNDRED", 100.0]
+  ["ONE HUNDRED", 100.0],
 ]);

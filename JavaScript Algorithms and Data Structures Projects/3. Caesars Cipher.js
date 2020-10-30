@@ -4,8 +4,10 @@ function rot13(str) {
   let nop = ["N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
   let arr = str.split(""); // Splits `str` into an array where each element is an individual character (including non-alphabetic characters)
 
-    for (let i = 0; i < arr.length; i++) { // Iterate number of `arr` elements
-      for (let j = 0; j < abc.length; j++) { // Iterate number of `abc`/`nop` array elements
+  for (let i = 0; i < arr.length; i++) {
+    // Iterate number of `arr` elements
+    for (let j = 0; j < abc.length; j++) {
+      // Iterate number of `abc`/`nop` array elements
       if (arr[i] === abc[j]) {
         arr[i] = nop[j]; // Swap the `arr` character for the corresponding `nop` array character
       } else if (arr[i] === nop[j]) {
