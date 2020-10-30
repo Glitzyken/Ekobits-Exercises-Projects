@@ -30,4 +30,9 @@ function palindrome(str) {
   return true;
 }
 
-palindrome("eye");
+console.log(palindrome("eye"));
+console.log(palindrome("_eye"));
+console.log(palindrome("race car"));
+console.log(palindrome("not a palindrome"));
+console.log(palindrome("A man, a plan, a canal. Panama"));
+console.log(palindrome("0_0 (: /- :) 0-0"));
