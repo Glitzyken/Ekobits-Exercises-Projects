@@ -1,0 +1,102 @@
+.card {
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  position: relative;
+
+  &__side {
+    height: 30rem;
+    transition: all 0.8s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 40px;
+    overflow: hidden;
+
+    &--front {
+      background-color: $dark-gray-2;
+    }
+
+    &--back {
+      transform: rotateY(180deg);
+      background-color: $dark-gray-2;
+    }
+  }
+
+  &__event {
+    position: absolute;
+    width: 100%;
+    height: 60%;
+    background: $gray;
+    bottom: 0rem;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+
+    &__overview {
+      padding: 2rem;
+
+      p {
+        &:not(:last-child) {
+          margin-bottom: 1rem;
+        }
+      }
+
+      span {
+        margin-right: 1rem;
+      }
+    }
+
+    &__detail {
+      width: 100%;
+      height: 100%;
+      position: relative;
+    }
+
+    &__full-detail {
+      margin: auto;
+      margin-top: 1.5rem;
+      padding-right: 1.5rem;
+      width: 85%;
+      height: 80%;
+      overflow-y: scroll;
+
+      p {
+        &:not(:last-child) {
+          margin-bottom: 1rem;
+        }
+      }
+
+      h4 {
+        font-size: 1.3rem;
+        color: $purple;
+        margin-bottom: 1rem;
+      }
+    }
+
+    &__header {
+      padding: 2rem;
+
+      h2 {
+        width: 60%;
+        font-size: 1.5rem;
+        font-weight: 500;
+      }
+    }
+
+    &__type {
+      text-align: right;
+      font-size: 2rem;
+      font-weight: 700;
+    }
+  }
+
+  &:hover &__side--front {
+    transform: rotateY(-180deg);
+  }
+
+  &:hover &__side--back {
+    transform: rotateY(0);
+  }
+}

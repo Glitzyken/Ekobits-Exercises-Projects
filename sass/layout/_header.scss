@@ -1,0 +1,30 @@
+.header {
+  background: $dark-gray-2;
+  width: 100%;
+  height: 20rem;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+
+  h1 {
+    font-size: 5rem;
+    font-weight: 700;
+  }
+
+  h2 {
+    font-size: 3rem;
+    font-weight: 700;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    font-weight: 100;
+    text-transform: uppercase;
+  }
+
+  &__dynamic {
+    padding: 2rem;
+  }
+}
