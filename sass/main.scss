@@ -1,15 +1,21 @@
+@import './mixins';
 @import './variables';
+
 @import './reset';
-@import './layout/header';
-@import './utility/alert';
-@import './utility/button';
-@import './utility/card';
+@import './header';
+@import './alert';
+@import './button';
+@import './card';
 
 body {
   color: $white;
   background: $gray;
   font-family: 'Roboto', sans-serif;
   margin: 5rem 0 5rem 0;
+
+  @include respond(tab-port) {
+    margin: 0;
+  }
 }
 
 .main {
@@ -17,6 +23,14 @@ body {
   margin: auto;
   background: $dark-gray-1;
   border-radius: 10px;
+
+  @include respond(tab-land) {
+    width: 90%;
+  }
+
+  @include respond(tab-port) {
+    width: 100%;
+  }
 }
 
 .events {
@@ -26,6 +40,30 @@ body {
   grid-template-columns: repeat(2, 1fr);
   gap: 3rem;
   grid-auto-rows: 30rem;
+
+  @include respond(tab-port) {
+    margin: 2rem;
+  }
+
+  @include respond(phone) {
+    margin: 1rem;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.next-event {
+  margin: 5rem 10rem;
+  font-size: 2rem;
+  font-weight: 100;
+  text-transform: uppercase;
+
+  @include respond(tab-port) {
+    margin: 2rem 5rem;
+  }
+
+  @include respond(phone) {
+    margin: 2rem;
+  }
 }
 
 .footer {
@@ -42,11 +80,4 @@ body {
     margin-left: 0.3rem;
     margin-right: 0.3rem;
   }
-}
-
-.next-event {
-  margin: 5rem 10rem;
-  font-size: 2rem;
-  font-weight: 100;
-  text-transform: uppercase;
 }

@@ -38,15 +38,28 @@ blockquote {
   .header h1 {
     font-size: 5rem;
     font-weight: 700; }
+    @media only screen and (max-width: 37.5em) {
+      .header h1 {
+        font-size: 2.5rem; } }
   .header h2 {
     font-size: 3rem;
     font-weight: 700; }
+    @media only screen and (max-width: 37.5em) {
+      .header h2 {
+        font-size: 1.5rem; } }
   .header h3 {
     font-size: 1.5rem;
     font-weight: 100;
     text-transform: uppercase; }
+    @media only screen and (max-width: 37.5em) {
+      .header h3 {
+        font-size: 1rem; } }
   .header__dynamic {
     padding: 2rem; }
+
+@media only screen and (max-width: 37.5em) {
+  .centered-phone {
+    text-align: center; } }
 
 .alert {
   position: fixed;
@@ -131,6 +144,9 @@ blockquote {
   -webkit-animation: glow-premium 1s ease-in-out infinite alternate;
   -moz-animation: glow-premium 1s ease-in-out infinite alternate;
   animation: glow-premium 1s ease-in-out infinite alternate; }
+  @media only screen and (max-width: 37.5em) {
+    .glow-premium {
+      font-size: 2rem; } }
 
 @-webkit-keyframes glow-premium {
   from {
@@ -170,6 +186,9 @@ blockquote {
       padding: 2rem; }
       .card__event__overview p:not(:last-child) {
         margin-bottom: 1rem; }
+        @media only screen and (max-width: 37.5em) {
+          .card__event__overview p:not(:last-child) {
+            margin-bottom: 0.5rem; } }
       .card__event__overview span {
         margin-right: 1rem; }
     .card__event__detail {
@@ -195,6 +214,9 @@ blockquote {
         width: 60%;
         font-size: 1.5rem;
         font-weight: 500; }
+        @media only screen and (max-width: 37.5em) {
+          .card__event__header h2 {
+            font-size: 1.3rem; } }
     .card__event__type {
       text-align: right;
       font-size: 2rem;
@@ -209,12 +231,21 @@ body {
   background: #3a3d49;
   font-family: 'Roboto', sans-serif;
   margin: 5rem 0 5rem 0; }
+  @media only screen and (max-width: 56.25em) {
+    body {
+      margin: 0; } }
 
 .main {
   width: 80%;
   margin: auto;
   background: #1b1c22;
   border-radius: 10px; }
+  @media only screen and (max-width: 75em) {
+    .main {
+      width: 90%; } }
+  @media only screen and (max-width: 56.25em) {
+    .main {
+      width: 100%; } }
 
 .events {
   margin: 5rem;
@@ -223,6 +254,25 @@ body {
   grid-template-columns: repeat(2, 1fr);
   gap: 3rem;
   grid-auto-rows: 30rem; }
+  @media only screen and (max-width: 56.25em) {
+    .events {
+      margin: 2rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .events {
+      margin: 1rem;
+      grid-template-columns: repeat(1, 1fr); } }
+
+.next-event {
+  margin: 5rem 10rem;
+  font-size: 2rem;
+  font-weight: 100;
+  text-transform: uppercase; }
+  @media only screen and (max-width: 56.25em) {
+    .next-event {
+      margin: 2rem 5rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .next-event {
+      margin: 2rem; } }
 
 .footer {
   width: 100%;
@@ -236,9 +286,3 @@ body {
     font-weight: 700;
     margin-left: 0.3rem;
     margin-right: 0.3rem; }
-
-.next-event {
-  margin: 5rem 10rem;
-  font-size: 2rem;
-  font-weight: 100;
-  text-transform: uppercase; }

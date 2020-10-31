@@ -21,8 +21,6 @@ const showAlert = (type, msg, time = 2) => {
 };
 
 const showCurrentEvent = (title, date, venue, deadline, briefing) => {
-  document.querySelector('.header h1').style.display = 'none';
-
   const markup = `<div class="header__dynamic">
   <h3>Your current event</h3>
   <h2>${title}</h2>
@@ -79,9 +77,7 @@ elements.premiumBtns.forEach((btn) => {
   btn.addEventListener('click', (event) => {
     showAlert('premium', 'Sorry, this is only for premium members!');
 
-    document.querySelector('.header h1').style.display = 'none';
-
-    const markup = `<div><h2>
+    const markup = `<div class="centered-phone"><h2>
     Become a <span class="glow-premium"> PREMIUM </span> member today!
   </h2>
   <button class="readMore">

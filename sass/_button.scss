@@ -78,6 +78,10 @@
   -webkit-animation: glow-premium 1s ease-in-out infinite alternate;
   -moz-animation: glow-premium 1s ease-in-out infinite alternate;
   animation: glow-premium 1s ease-in-out infinite alternate;
+
+  @include respond(phone) {
+    font-size: 2rem;
+  }
 }
 
 @-webkit-keyframes glow-premium {
