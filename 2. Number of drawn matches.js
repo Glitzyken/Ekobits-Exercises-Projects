@@ -26,7 +26,7 @@ async function getNumDraw(year) {
           }
         });
 
-        console.log(`Fetched ${count} drawn matches from page ${i}`); // This for a visible sign of progress
+        console.log(`Fetched ${count} drawn matche(s) from page ${i}`); // This for a visible sign of progress
         drawnMatchesArray.push(count);
       });
   }
@@ -35,7 +35,9 @@ async function getNumDraw(year) {
     (acc, val) => acc + val
   );
 
-  console.log(totalResultOfDrawnMatches);
+  console.log(
+    `There are ${totalResultOfDrawnMatches} drawn matches in ${year}`
+  );
 }
 
 getNumDraw(2011);
