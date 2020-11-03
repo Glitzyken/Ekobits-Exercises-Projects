@@ -3,9 +3,6 @@
   width: 100%;
   height: 20rem;
   margin: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   border-radius: 10px;
 
   h1 {
@@ -15,6 +12,13 @@
     @include respond(phone) {
       font-size: 2.5rem;
     }
+  }
+
+  .h1 {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   h2 {
@@ -38,11 +42,28 @@
 
   &__dynamic {
     padding: 2rem;
+    width: 60%;
+
+    &__container {
+      display: flex;
+      justify-content: space-between;
+    }
   }
 }
 
 .centered-phone {
+  padding: 5rem;
+
   @include respond(phone) {
     text-align: center;
+    padding: 5rem 1rem 1rem 1rem;
   }
+}
+
+.share {
+  width: 40%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 2rem;
 }

@@ -21,7 +21,9 @@ const showAlert = (type, msg, time = 2) => {
 };
 
 const showCurrentEvent = (title, date, venue, deadline, briefing) => {
-  const markup = `<div class="header__dynamic">
+  const markup = `
+  <div class="header__dynamic__container">
+  <div class="header__dynamic">
   <h3>Your current event</h3>
   <h2>${title}</h2>
   <div>
@@ -32,7 +34,16 @@ const showCurrentEvent = (title, date, venue, deadline, briefing) => {
     ${briefing}
     </p>
   </div>
-</div> `;
+</div>
+<div class="share">
+<button class="readMore">
+Share Event
+<div>&rarr;</div>
+</div>
+</button>
+</div>
+
+`;
 
   elements.header.innerHTML = markup;
 };

@@ -31,9 +31,6 @@ blockquote {
   width: 100%;
   height: 20rem;
   margin: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   border-radius: 10px; }
   .header h1 {
     font-size: 5rem;
@@ -41,6 +38,11 @@ blockquote {
     @media only screen and (max-width: 37.5em) {
       .header h1 {
         font-size: 2.5rem; } }
+  .header .h1 {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
   .header h2 {
     font-size: 3rem;
     font-weight: 700; }
@@ -55,11 +57,25 @@ blockquote {
       .header h3 {
         font-size: 1rem; } }
   .header__dynamic {
-    padding: 2rem; }
+    padding: 2rem;
+    width: 60%; }
+    .header__dynamic__container {
+      display: flex;
+      justify-content: space-between; }
 
-@media only screen and (max-width: 37.5em) {
-  .centered-phone {
-    text-align: center; } }
+.centered-phone {
+  padding: 5rem; }
+  @media only screen and (max-width: 37.5em) {
+    .centered-phone {
+      text-align: center;
+      padding: 5rem 1rem 1rem 1rem; } }
+
+.share {
+  width: 40%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 2rem; }
 
 .alert {
   position: fixed;
