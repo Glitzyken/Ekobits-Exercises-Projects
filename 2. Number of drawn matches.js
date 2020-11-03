@@ -3,18 +3,24 @@ async function getNumDraw(year) {
 
   await fetch(url)
     .then((res) => res.json())
-    .then((data) => data.data)
+    .then((data) => {
+      console.log(data);
+      return data.data;
+    })
     .then((dataArr) => {
-      return dataArr
-        .reduce((acc, val) => {
-          const team1Goal = val.team1goals;
-          const team2Goal = val.team2goals;
+      let count = 0;
+      dataArr.forEach((el) => {
+        let team1goal = el.team1goals;
+        let team2goal = el.team2goals;
 
-          if (team1Goal === team2Goal) {
-            acc += 1;
-          }
-        })
-        .then((totalDraw) => console.log(totalDraw));
+        // console.log(el);
+
+        if (team1goal === team2goal) {
+          count += 1;
+        }
+      });
+
+      console.log(count);
     });
 }
 
