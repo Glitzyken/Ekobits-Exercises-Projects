@@ -59,9 +59,15 @@ blockquote {
   .header__dynamic {
     padding: 2rem;
     width: 60%; }
+    @media only screen and (max-width: 56.25em) {
+      .header__dynamic {
+        width: 80%; } }
     .header__dynamic__container {
       display: flex;
       justify-content: space-between; }
+      @media only screen and (max-width: 56.25em) {
+        .header__dynamic__container {
+          flex-direction: column; } }
 
 .centered-phone {
   padding: 5rem; }
@@ -76,6 +82,13 @@ blockquote {
   align-items: flex-end;
   justify-content: flex-end;
   padding: 2rem; }
+  @media only screen and (max-width: 56.25em) {
+    .share {
+      width: 85%;
+      align-items: none;
+      justify-content: none;
+      padding: 0;
+      margin-top: -2rem; } }
 
 .alert {
   position: fixed;
