@@ -11,3 +11,4 @@
 
 1. CSS `css-project Branch`
 2. CSS MILESTONE `css-milestone Branch`
+3. JS MILESTONE `algorithm Branch` `rest-api Branch` `vanhack-event-app Branch` `js-basic-skill Branch`
