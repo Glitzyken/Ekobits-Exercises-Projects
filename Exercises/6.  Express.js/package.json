@@ -1,0 +1,14 @@
+{
+  "name": "express-exercise",
+  "version": "1.0.0",
+  "description": "Express.js Exercise",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "author": "Ken Jimmy",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

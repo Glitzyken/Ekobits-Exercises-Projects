@@ -1,0 +1,12 @@
+[
+  { "id": 1, "name": "Bag" },
+  { "id": 2, "name": "Phone" },
+  { "id": 3, "name": "T-Shirt" },
+  { "id": 4, "name": "Wrist Watch" },
+  { "id": 5, "name": "Necklace" },
+  { "id": 6, "name": "Face Cap" },
+  { "id": 7, "name": "Textbook" },
+  { "id": 8, "name": "Toothpaste" },
+  { "id": 9, "name": "Hand Wash" },
+  { "id": 10, "name": "Grocery" }
+]
