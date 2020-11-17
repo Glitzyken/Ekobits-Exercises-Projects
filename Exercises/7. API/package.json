@@ -1,0 +1,17 @@
+{
+  "name": "api-exercise",
+  "version": "1.0.0",
+  "description": "For this application you will be building an API to store and display user information. ",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "author": "Kenneth Jimmy",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "express": "^4.17.1",
+    "mongoose": "^5.10.14",
+    "validator": "^13.1.17"
+  }
+}
