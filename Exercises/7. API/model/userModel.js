@@ -21,6 +21,7 @@ const userSchema = new mongoose.Schema({
     required: [true, 'Please provide a password.'],
     maxlength: [8, 'Password should be less than 8 characters.'],
     minlength: [4, 'Password should be more than 4 characters.'],
+    select: false,
   },
   isAdmin: Boolean,
 });

@@ -1,4 +1,30 @@
+const jwt = require('jsonwebtoken');
+
 const User = require('../model/userModel');
+
+exports.signUp = async (req, res) => {
+  try {
+    const newUser = await User.create({
+      username: req.body.username,
+      password: req.body.password,
+    });
+
+    const token = jwt.sign({ id: newUser._id }, 'secret');
+
+    res.status(201).json({
+      status: 'success',
+      token,
+      data: {
+        user: newUser,
+      },
+    });
+  } catch (error) {
+    res.status(400).json({
+      status: 'fail',
+      message: error,
+    });
+  }
+};
 
 exports.getAllUsers = async (req, res) => {
   try {
@@ -37,12 +63,15 @@ exports.getUser = async (req, res) => {
   }
 };
 
-exports.createUser = async (req, res) => {
+exports.createAnyUserIncludingAdminRole = async (req, res) => {
   try {
     const newUser = await User.create(req.body);
 
+    const token = jwt.sign({ id: newUser._id }, 'secret');
+
     res.status(201).json({
       status: 'success',
+      token,
       data: {
         user: newUser,
       },
