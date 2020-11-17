@@ -26,6 +26,36 @@ exports.signUp = async (req, res) => {
   }
 };
 
+exports.login = async (req, res) => {
+  try {
+    // Check if email and password exist
+    const { username, password } = req.body;
+    if (!username || !password) throw new Error();
+
+    // Check if user exists and password is correct
+    const user = await User.findOne({ username }).select('+password');
+    const correct = await user.isCorrectPassword(password, user.password);
+    if (!user || !correct) {
+      throw new Error();
+    }
+
+    // If everything is ok, send token to client
+    const token = jwt.sign({ id: user._id }, 'secret');
+    res.status(200).json({
+      status: 'success',
+      token,
+      data: {
+        user,
+      },
+    });
+  } catch (error) {
+    res.status(401).json({
+      status: 'fail',
+      message: 'Please, provide a valid username or password',
+    });
+  }
+};
+
 exports.getAllUsers = async (req, res) => {
   try {
     const users = await User.find();

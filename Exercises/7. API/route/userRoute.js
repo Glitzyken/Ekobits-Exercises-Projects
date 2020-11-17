@@ -4,10 +4,13 @@ const userController = require('../controller/userController');
 
 const router = express.Router();
 
-router.post('/signUp', userController.signUp);
+router.post('/signup', userController.signUp);
+router.post('/login', userController.login);
 
-router.route('/').get(userController.getAllUsers);
-// .post(userController.createAnyUserIncludingAdminRole);
+router
+  .route('/')
+  .get(userController.getAllUsers)
+  .post(userController.createAnyUserIncludingAdminRole);
 
 router
   .route('/:id')

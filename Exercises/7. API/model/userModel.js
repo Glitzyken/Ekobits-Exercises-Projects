@@ -21,17 +21,29 @@ const userSchema = new mongoose.Schema({
     required: [true, 'Please provide a password.'],
     maxlength: [8, 'Password should be less than 8 characters.'],
     minlength: [4, 'Password should be more than 4 characters.'],
-    select: false,
+    select: false, // will not show password in res output
   },
-  isAdmin: Boolean,
+  isAdmin: {
+    type: Boolean,
+    default: false,
+  },
 });
 
+// hash password when password has been provided or modified before parsisting it to DB
 userSchema.pre('save', async function (next) {
-  if (!this.isModified('password')) return next();
+  if (!this.isModified('password')) return next(); // This will ensure password does not get hashed again when other properties are modified or updated without the password
 
   this.password = await bcrypt.hash(this.password, 12);
   next();
 });
+
+// compare if password provided on login coresponds with hashed password and return boolean value (I'm using this in userController.js)
+userSchema.methods.isCorrectPassword = async function (
+  loginPassword,
+  hashedPassword
+) {
+  return await bcrypt.compare(loginPassword, hashedPassword);
+};
 
 const User = mongoose.model('User', userSchema);
 
