@@ -1,3 +1,4 @@
+const { promisify } = require('util');
 const jwt = require('jsonwebtoken');
 
 const User = require('../model/userModel');
@@ -93,15 +94,12 @@ exports.getUser = async (req, res) => {
   }
 };
 
-exports.createAnyUserIncludingAdminRole = async (req, res) => {
+exports.createUserByAdmin = async (req, res) => {
   try {
     const newUser = await User.create(req.body);
 
-    const token = jwt.sign({ id: newUser._id }, 'secret');
-
     res.status(201).json({
       status: 'success',
-      token,
       data: {
         user: newUser,
       },
@@ -147,6 +145,27 @@ exports.deleteUser = async (req, res) => {
     res.status(404).json({
       status: 'fail',
       message: error,
+    });
+  }
+};
+
+exports.protect = async (req, res, next) => {
+  try {
+    // Get token and check if it's there
+    const token = req.headers.authorization.split(' ')[1];
+
+    if (!token) {
+      throw new Error();
+    }
+
+    // Verify token
+    await promisify(jwt.verify)(token, 'secret');
+
+    next();
+  } catch (error) {
+    res.status(401).json({
+      status: 'fail',
+      message: 'Your are not allowed access.',
     });
   }
 };

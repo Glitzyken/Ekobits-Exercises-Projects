@@ -10,12 +10,12 @@ router.post('/login', userController.login);
 router
   .route('/')
   .get(userController.getAllUsers)
-  .post(userController.createAnyUserIncludingAdminRole);
+  .post(userController.createUserByAdmin);
 
 router
   .route('/:id')
-  .get(userController.getUser)
-  .patch(userController.updateUser)
-  .delete(userController.deleteUser);
+  .get(userController.protect, userController.getUser)
+  .patch(userController.protect, userController.updateUser)
+  .delete(userController.protect, userController.deleteUser);
 
 module.exports = router;
