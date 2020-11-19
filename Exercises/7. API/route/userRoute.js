@@ -9,8 +9,12 @@ router.post('/login', userController.login);
 
 router
   .route('/')
-  .get(userController.getAllUsers)
-  .post(userController.createUserByAdmin);
+  .get(
+    userController.protect,
+    userController.isAdmin,
+    userController.getAllUsers
+  )
+  .post(userController.protect, userController.createUserByAdmin);
 
 router
   .route('/:id')

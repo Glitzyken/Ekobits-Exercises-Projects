@@ -158,14 +158,31 @@ exports.protect = async (req, res, next) => {
       throw new Error();
     }
 
-    // Verify token
-    await promisify(jwt.verify)(token, 'secret');
+    // Verify token and store currentUser
+    const decoded = await promisify(jwt.verify)(token, 'secret');
+
+    req.user = await User.findById(decoded.id);
 
     next();
   } catch (error) {
     res.status(401).json({
       status: 'fail',
       message: 'Your are not allowed access.',
+    });
+  }
+};
+
+exports.isAdmin = async (req, res, next) => {
+  try {
+    if (!req.user.isAdmin) {
+      throw new Error();
+    }
+
+    next();
+  } catch (error) {
+    res.status(401).json({
+      status: 'fail',
+      message: 'Your are not an admin.',
     });
   }
 };
