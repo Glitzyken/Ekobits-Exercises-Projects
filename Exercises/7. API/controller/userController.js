@@ -167,7 +167,7 @@ exports.protect = async (req, res, next) => {
   } catch (error) {
     res.status(401).json({
       status: 'fail',
-      message: 'Your are not allowed access.',
+      message: 'You are not logged in.',
     });
   }
 };
