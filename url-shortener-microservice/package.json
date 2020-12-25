@@ -1,16 +1,18 @@
 {
-  "name": "timestamp-microservice",
+  "name": "url_shortener",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "url shortener",
+  "main": "server.js",
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "node server.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Aung Myo Kyaw",
   "license": "ISC",
   "dependencies": {
-    "cors": "^2.8.5",
-    "express": "^4.17.1"
+    "express": "^4.14.0",
+    "mongodb": "^2.2.10",
+    "shortid": "^2.2.6",
+    "valid-url": "^1.0.9"
   }
 }
