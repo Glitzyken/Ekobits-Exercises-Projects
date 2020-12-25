@@ -9,8 +9,15 @@ app.use(express.json());
 app.use(express.static("public"));
 
 app.get("/api/whoami", async (req, res) => {
+  console.log(req.headers);
+  const ip = await req.headers["x-forwarded-for"];
+  const lang = await req.headers["accept-language"];
+  const software = await req.headers["user-agent"];
+
   res.status(200).json({
-    data: "ok",
+    ipaddress: ip,
+    language: lang,
+    software,
   });
 });
 
