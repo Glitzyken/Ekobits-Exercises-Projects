@@ -1,48 +1,37 @@
 //All requirements
 const express = require("express");
 const multer = require("multer");
-const upload = multer();
 const cors = require("cors");
 const mongoose = require("mongoose");
+
+let user = require("./schema.js").user;
+
+const upload = multer();
 
 const app = express();
 
 app.use(express.json());
+app.use(cors());
 
-//Connect to DB
 mongoose.connect(process.env.MONGO_URI, {
   useNewUrlParser: true,
-  // useUnifiedTopology: true,
   useCreateIndex: true,
 });
 
-//Use the requirements
-app.use(cors());
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
-
-// // let's make json a bit cleaner
-// app.set("json spaces", 2);
-
-//Send the HTML
 app.use(express.static("public"));
 app.get("/", (req, res) => {
   res.sendFile(__dirname + "/views/index.html");
 });
 
-//Import model
-let user = require("./schema.js").user;
-// functions
-function isValidDate(d) {
-  return d instanceof Date && !isNaN(d);
-}
+// // functions
+// function isValidDate(d) {
+//   return d instanceof Date && !isNaN(d);
+// }
 
-//  /api/exercise/new-user  code
 app.post("/api/exercise/new-user", (req, res, next) => {
   let username = req.body.username;
 
   if (username) {
-    //check if name is entered in field
     let userAdd = { username: username, count: 0, log: [] };
     user.findOne({ username: userAdd.username }, (err, data) => {
       if (err) next(err);
@@ -60,7 +49,6 @@ app.post("/api/exercise/new-user", (req, res, next) => {
   }
 });
 
-//  /api/exercise/add  code
 app.post("/api/exercise/add", upload.none(), (req, res, next) => {
   console.log("Status: " + res.statusCode);
   console.log("Header: " + JSON.stringify(req.headers));

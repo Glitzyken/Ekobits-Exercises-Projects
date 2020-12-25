@@ -1,8 +1,6 @@
-// All the requirements
-const mongoose = require('mongoose')
-let Schema = mongoose.Schema
+const mongoose = require("mongoose");
+let Schema = mongoose.Schema;
 
-// Create schema
 let userSchema = new Schema({
   username: String,
   count: Number,
@@ -10,13 +8,11 @@ let userSchema = new Schema({
     {
       description: String,
       duration: Number,
-      date: Date
-    }
-  ]
-})
+      date: Date,
+    },
+  ],
+});
 
-// Create model
-let user = mongoose.model('user', userSchema)
+let user = mongoose.model("user", userSchema);
 
-//Export model
-exports.user = user
+exports.user = user;
